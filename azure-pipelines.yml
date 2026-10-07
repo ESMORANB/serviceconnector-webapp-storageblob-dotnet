@@ -8,7 +8,7 @@ variables:
   buildConfiguration: 'Release'
   dotnetVersion: '9.x'
   azureSubscription: 'MIA_Connection'
-  appName: 'mia-semana14-eduardo'   # cambia por el nombre real de tu App Service
+  appName: 'storage-container-connector-esmb'
 
 steps:
 # 1. Instalar .NET 9
@@ -56,4 +56,3 @@ steps:
     appType: 'webApp'
     appName: '$(appName)'
     package: '$(Build.ArtifactStagingDirectory)/publish/**/*.zip'
-    
