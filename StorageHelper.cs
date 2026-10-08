@@ -12,7 +12,7 @@ namespace WebStorageSample
     {
         // En local: saltamos la Managed Identity (tu PC no es una VM de Azure) y usamos tu az login.
         // En App Service: Azure define WEBSITE_SITE_NAME y ahí sí usamos la Managed Identity.
-        private static TokenCredential GetCredential()
+        public static TokenCredential GetCredential()
         {
             bool enAzure = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("WEBSITE_SITE_NAME"));
 
